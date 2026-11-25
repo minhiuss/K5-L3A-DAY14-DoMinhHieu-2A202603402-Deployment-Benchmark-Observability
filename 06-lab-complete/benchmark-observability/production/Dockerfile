@@ -25,6 +25,8 @@ RUN chown -R agent:agent /app
 
 USER agent
 
+# Fix: useradd -d /app → HOME=/app, Python tìm user site ở /app/.local → chỉ rõ chỗ đã COPY gói vào
+ENV PYTHONUSERBASE=/home/agent/.local
 ENV PATH=/home/agent/.local/bin:$PATH
 ENV PYTHONPATH=/app
 ENV PYTHONDONTWRITEBYTECODE=1
