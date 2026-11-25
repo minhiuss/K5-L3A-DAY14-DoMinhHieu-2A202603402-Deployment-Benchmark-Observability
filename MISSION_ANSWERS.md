@@ -142,7 +142,7 @@ Header `Server: nginx` + 3 header bảo mật → request đi qua Nginx rồi m�
 
 ### Exercise 3.1: Railway deployment
 
-- URL: ⏳ (điền sau khi `railway up` + `railway domain`)
+- URL: **https://superb-upliftment-production.up.railway.app** — `/health` 200, `/ready` 200 (Redis nối được), `/ask` không key 401; `check_production_ready.py --public-url` → PASS 12/12 · 44/44
 - Screenshot: `screenshots/dashboard.png`, `screenshots/running.png`, `screenshots/test.png`
 - Deploy thư mục `06-lab-complete/` (agent Part 6), Redis là service Redis của Railway, `REDIS_URL` + `AGENT_API_KEY` đặt trong Variables.
 
